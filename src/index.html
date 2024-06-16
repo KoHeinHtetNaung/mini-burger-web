@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burger Website</title>
+
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- swiperjs -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- header -->
+    <header id="header" class="bg-primaryColor dark:bg-darkColor fixed top-0 left-0 w-full z-50">
+      <nav class="container relative h-14 flex justify-between items-center">
+        <div class="">
+          <a href="#" class="text-2xl uppercase font-oswald">
+            Bur<span class="text-secondaryColor font-oswald">ger</span>
+          </a>
+        </div>
+
+        <div
+          id="nav"
+          class="hidden absolute top-0 left-0 w-full py-14 bg-primaryColor dark:bg-darkColor border-b border-secondaryColor md:block md:static md:py-0 md:border-none md:w-auto md:ml-auto"
+        >
+          <ul class="flex flex-col text-center gap-5 md:flex-row">
+            <li>
+              <a
+                href="#home"
+                
+                class="nav-link text-secondaryColor hover:text-secondaryColor ease-in duration-200"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                
+                class="nav-link hover:text-secondaryColor ease-in duration-200"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#menu"
+                
+                class="nav-link hover:text-secondaryColor ease-in duration-200"
+                >Menu</a
+              >
+            </li>
+            <li>
+              <a
+                href="#review"
+                
+                class="nav-link hover:text-secondaryColor ease-in duration-200"
+                >Review</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                
+                class="nav-link hover:text-secondaryColor ease-in duration-200"
+                >Contact</a
+              >
+            </li>
+          </ul>
+
+          <div
+            id="close"
+            class="absolute top-[0.7rem] right-4 text-2xl cursor-pointer md:hidden"
+          >
+            <i class="ri-close-large-fill"></i>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-5">
+          <i id="theme-toggle" class="ri-moon-line cursor-pointer ml-4 text-xl"></i>
+          <div class="md:hidden" id="hamburger">
+            <i class="ri-menu-2-line cursor-pointer text-xl"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- home -->
+      <section id="home">
+        <div class="container flex flex-col items-center gap-10 md:flex-row">
+          <div class="mx-auto md:basis-1/2 lg:basis-2/5 animate-movingY">
+            <img class="home__image w-64 md:w-full" src="./img/img1.png" alt="home image" />
+          </div>
+
+          <div class="home__content text-center md:basis-1/2 md:text-start lg:basis-3/5">
+            <h1 class="home__title">HAPPY TUMMYM WITH TASTY BURGERS.</h1>
+            <div class="separator mx-auto md:mx-0"></div>
+            <p class="c">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et illo,
+              natus rem laborum quisquam suscipit, iste libero velit,
+              necessitatibus veritatis perferendis numquam vitae pariatur
+              tempora quae. Aperiam ducimus a doloremque esse. Aperiam rerum,
+              nostrum laudantium sint ex ipsa aspernatur aliquam!
+            </p>
+            <div
+              class="text-base flex items-center justify-center gap-4 py-10 md:justify-start md:gap-20"
+            >
+              <div class="text-center">
+                <i
+                  class="fa-solid fa-utensils text-secondaryColor text-4xl"
+                ></i>
+                <br />
+                Delicious
+              </div>
+              <div class="text-center">
+                <i class="fa-solid fa-droplet text-secondaryColor text-4xl"></i>
+                <br />
+                Fresh
+              </div>
+              <div class="text-center">
+                <i class="fa-brands fa-envira text-secondaryColor text-4xl"></i>
+                <br />
+                Organic
+              </div>
+            </div>
+
+            <a href="#" class="btn btn-primary">Learn more</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- category -->
+      <section id="category">
+        <div class="container flex flex-col gap-5 md:flex-row">
+          <!-- card1 -->
+          <div
+            class="category__card bg-secondaryColor  flex py-3 rounded-lg overflow-hidden md:flex-1"
+          >
+            <div class="basis-1/3 relative">
+              <img
+                class="absolute w-28 -bottom-7 -left-5"
+                src="./img/img2.png"
+                alt="category image"
+              />
+            </div>
+
+            <div>
+              <div class="mb-2">
+                <h4 class="card__title">Food</h4>
+                <p class="text-xs">Lorem ipsum dolor sit.</p>
+              </div>
+              <a class="text-blackColor cursor-pointer text-xl" href="#"
+                >Buy online</a
+              >
+            </div>
+          </div>
+
+          <!-- card2 -->
+          <div
+            class="category__card bg-redColor flex py-3 rounded-lg overflow-hidden md:flex-1"
+          >
+            <div class="basis-1/3 relative">
+              <img
+                class="absolute w-28 -bottom-5 -left-4"
+                src="./img/img3.png"
+                alt="category image"
+              />
+            </div>
+
+            <div>
+              <div class="mb-2">
+                <h4 class="card__title">Food</h4>
+                <p class="text-xs">Lorem ipsum dolor sit.</p>
+              </div>
+              <a class="text-secondaryColor cursor-pointer text-xl" href="#"
+                >Buy online</a
+              >
+            </div>
+          </div>
+
+          <!-- card3 -->
+          <div
+            class="category__card bg-greenColor flex py-3 rounded-lg overflow-hidden md:flex-1"
+          >
+            <div class="basis-1/3 relative">
+              <img
+                class="absolute w-28 -bottom-7 -left-3"
+                src="./img/img4.png"
+                alt="category image"
+              />
+            </div>
+
+            <div>
+              <div class="mb-2">
+                <h4 class="card__title">Food</h4>
+                <p class="text-xs">Lorem ipsum dolor sit.</p>
+              </div>
+              <a class="text-secondaryColor cursor-pointer text-xl" href="#"
+                >Buy online</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- promo -->
+      <section id="promo">
+        <div class="container flex flex-col gap-5 lg:gap-10 lg:flex-row">
+          <!-- card1 -->
+          <div
+            class="promo__card-1 bg-primaryColorLight dark:bg-darkColorLight flex flex-col p-5 rounded-lg md:flex-row md:items-center lg:flex-row-reverse lg:flex-1"
+          >
+            <img
+              class="w-48 mx-auto hover:animate-movingY"
+              src="./img/img5.png"
+              alt=""
+            />
+
+            <div class="space-y-2 pt-5 md:pt-0">
+              <p class="text-xs text-secondaryColor">Payday promo</p>
+              <h3 class="card__title">GET A 10% DISCOUNT ON PAYDAY WEEK.</h3>
+              <p class="paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab?
+              </p>
+              <a class="text-xs text-secondaryColor" href="#">Buy online</a>
+            </div>
+          </div>
+
+          <!-- card2 -->
+          <div
+            class="promo__card-2 bg-primaryColorLight dark:bg-darkColorLight flex flex-col p-5 rounded-lg md:flex-row md:items-center lg:flex-row-reverse lg:flex-1"
+          >
+            <img
+              class="w-44 mx-auto hover:animate-movingY"
+              src="./img/img6.png"
+              alt=""
+            />
+
+            <div class="space-y-2 pt-5 md:pt-0">
+              <p class="text-xs text-secondaryColor">Payday promo</p>
+              <h3 class="card__title">GET A 10% DISCOUNT ON PAYDAY WEEK.</h3>
+              <p class="paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab?
+              </p>
+              <a class="text-xs text-secondaryColor" href="#">Buy online</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- about -->
+      <section id="about">
+        <div class="container flex flex-col gap-10 md:flex-row">
+          <div class="about__img flex-1">
+            <img class="rounded-lg" src="./img/img7.avif" alt="" />
+          </div>
+
+          <div class="about__content flex-1">
+            <h2 class="section__title">
+              FIND FOODS AND DRINKS, ALL-IN-ONE PLACE FOR YOUR BEST TASTE.
+            </h2>
+            <div class="separator"></div>
+            <p class="paragraph">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. In
+              facere earum modi ut ipsum deserunt adipisci delectus libero
+              corporis doloribus inventore excepturi, perferendis repellat?
+            </p>
+            <ul class="grid grid-cols-2 py-5 space-y-1">
+              <li class="text-xs text-paragraphColor">
+                <i class="fa-solid fa-check text-secondaryColor"></i>
+                Best Price
+              </li>
+              <li class="text-xs text-paragraphColor">
+                <i class="fa-solid fa-check text-secondaryColor"></i>
+                Fresh ingredient
+              </li>
+              <li class="text-xs text-paragraphColor">
+                <i class="fa-solid fa-check text-secondaryColor"></i>
+                Best Service
+              </li>
+              <li class="text-xs text-paragraphColor">
+                <i class="fa-solid fa-check text-secondaryColor"></i>
+                Health Protocol
+              </li>
+            </ul>
+            <a class="btn btn-primary" href="#">About Us</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- menu  -->
+      <section id="menu">
+        <div class="container">
+          <div class="max-w-md mx-auto text-center">
+            <h2 class="section__title">OUR BEST MENU</h2>
+            <div class="separator mx-auto"></div>
+            <p class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem eum vitae pariatur quae autem.</p>
+
+            <div class="tabs_wrap">
+              <ul class="flex flex-wrap justify-center gap-3 py-10">
+                <li data-tabs="all" class="btn bg-primaryColorLight dark:bg-darkColorLight active">All</li>
+                <li data-tabs="food" class="btn bg-primaryColorLight dark:bg-darkColorLight">Food</li>
+                <li data-tabs="snack" class="btn bg-primaryColorLight dark:bg-darkColorLight">Snack</li>
+                <li data-tabs="beverage" class="btn bg-primaryColorLight dark:bg-darkColorLight">Beverage</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="menu__items">
+            <ul class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 lg:gap-12">
+
+              <!-- food -->
+              <li class="item_wrap food">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40" >
+                  <img class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24" src="./img/img2.png " alt="">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">REGULAR BEEF BURGER</h4>
+                    <p class="paragraph text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">$42.00</p>
+              </li>
+
+              <li class="item_wrap food">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40" >
+                  <img class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24" src="./img/img8.png " alt="">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">REGULAR BEEF BURGER</h4>
+                    <p class="paragraph text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">$42.00</p>
+              </li>
+
+              <li class="item_wrap food">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40" >
+                  <img class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24" src="./img/img9.png " alt="">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">REGULAR BEEF BURGER</h4>
+                    <p class="paragraph text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">$42.00</p>
+              </li>
+
+              <li class="item_wrap food">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40" >
+                  <img class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24" src="./img/img10.png " alt="">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">REGULAR BEEF BURGER</h4>
+                    <p class="paragraph text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">$42.00</p>
+              </li>
+
+              <li class="item_wrap food">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40" >
+                  <img class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24" src="./img/img11.png " alt="">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">REGULAR BEEF BURGER</h4>
+                    <p class="paragraph text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">$42.00</p>
+              </li>
+
+              <!-- snack -->
+               <li class="item_wrap snack">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40" >
+                  <img class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24" src="./img/img3.png " alt="">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">FRENCH FRIES </h4>
+                    <p class="paragraph text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">$42.00</p>
+              </li>
+
+              <li class="item_wrap snack">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40" >
+                  <img class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24" src="./img/snack2.png " alt="">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">REGULAR BEEF BURGER</h4>
+                    <p class="paragraph text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">$42.00</p>
+              </li>
+
+              <li class="item_wrap snack">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40" >
+                  <img class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24" src="./img/snack3.png " alt="">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">REGULAR BEEF BURGER</h4>
+                    <p class="paragraph text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">$42.00</p>
+              </li>
+
+              <li class="item_wrap snack">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40" >
+                  <img class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24" src="./img/snack4.png " alt="">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">REGULAR BEEF BURGER</h4>
+                    <p class="paragraph text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">$42.00</p>
+              </li>
+
+              <li class="item_wrap snack">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40" >
+                  <img class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24" src="./img/snack5.png " alt="">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">REGULAR BEEF PIZZA</h4>
+                    <p class="paragraph text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">$42.00</p>
+              </li>
+
+              <li class="item_wrap snack">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40" >
+                  <img class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24" src="./img/cake.png " alt="">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">REGULAR CHOCOLATE CAKE</h4>
+                    <p class="paragraph text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">$42.00</p>
+              </li>
+
+              <!-- beverage -->
+              <li class="item_wrap beverage">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40" >
+                  <img class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24" src="./img/beverage1.png " alt="">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">SWEET SMOOTHIE</h4>
+                    <p class="paragraph text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">$42.00</p>
+              </li>
+
+              <li class="item_wrap beverage">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40" >
+                  <img class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24" src="./img/beverage2.png " alt="">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">SWEET SMOOTHIE</h4>
+                    <p class="paragraph text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">$42.00</p>
+              </li>
+
+              <li class="item_wrap beverage">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40" >
+                  <img class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24" src="./img/beverage3.png " alt="">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">SWEET SMOOTHIE</h4>
+                    <p class="paragraph text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">$42.00</p>
+              </li>
+
+              <li class="item_wrap beverage">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40" >
+                  <img class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24" src="./img/beverage4.png " alt="">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">SWEET SMOOTHIE</h4>
+                    <p class="paragraph text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">$42.00</p>
+              </li>
+
+              <li class="item_wrap beverage">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40" >
+                  <img class="w-40 hover:scale-110 ease-linear duration-200 md:w-48 lg:w-24" src="./img/beverage5.png " alt="">
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">SWEET SMOOTHIE</h4>
+                    <p class="paragraph text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                  </div>
+
+                  <p class="text-secondaryColor">$42.00</p>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- review -->
+       <section id="review" class="bg-primaryColorLight dark:bg-darkColorLight py-20">
+        <div class="customer__review container">
+          <div class="max-w-md mx-auto text-center">
+            <h2 class="section__title">CUSTOMER REVIEW</h2>
+            <div class="separator mx-auto"></div>
+            <p class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem eum vitae pariatur quae autem.</p>
+          </div>
+
+          <div class="swiper mt-10">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <div class="bg-primaryColor dark:bg-darkColor flex flex-col gap-5 rounded-lg p-6">
+                  <p class="paragraph ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur voluptatum provident velit neque error voluptatem recusandae non.</p>
+                  <div class="flex items-center">
+                    <img class="w-12 h-12 rounded-full" src="https://i.ytimg.com/vi/VHOnx6p9LaU/hq720_2.jpg?sqp=-oaymwEiCNAFENAFSFryq4qpAxQIARUAAAAAJQAAyEI9AICiQ9ABAQ==&rs=AOn4CLCLsFJr8ur2pzeAiLRybEaApPI1Uw" alt="">
+                      <div class="ml-2">
+                        <p class="font-oswald uppercase">Honey Nway Oo</p>
+                        <p class="paragraph">Designer</p>
+                      </div>   
+                      <i class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"></i>                  
+                    </img>
+                  </div>
+                </div>
+              </li>
+
+              <li class="swiper-slide">
+                <div class="bg-primaryColor dark:bg-darkColor flex flex-col gap-5 rounded-lg p-6">
+                  <p class="paragraph ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur voluptatum provident velit neque error voluptatem recusandae non.</p>
+                  <div class="flex items-center">
+                    <img class="w-12 h-12 rounded-full" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMVFhUXGBgYGBcXGBUXFxYXFxcWFxcaFxcYHSggGBolHRUXIjEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGi4lICUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAEAAIDBQYBB//EAEAQAAEDAgQDBgMGBAUDBQAAAAEAAhEDIQQSMUEFUWETInGBkbEGMqEUQlLB0fAzcuHxFiNikrIVU4IHQ2Nzov/EABoBAAIDAQEAAAAAAAAAAAAAAAECAAMEBQb/xAA2EQACAQMDAQQIBAYDAAAAAAAAAQIDESEEEjFBE1FhkQUUFSJScdHwMkKxwVOBgqHh8SMzNP/aAAwDAQACEQMRAD8Ax1SmzQCURxDCMYxhFQFx1ZyTsdVbDWsEEC/MFNwOFp1DDiS7msM5PErtLu7y2NuLAOHpd4ZtJXajc9QgmGzHgi+KNAIawm2/VVlJhLr81asrcI1Z2Ca2AFnTAmPFLGPaLMgAiNNeq5ii8O7OD3fzQmJovkAtI3QjB3u2NfByAF3EHdTkZoERGqHxTLwLq7loXgY2oArHhhBJnQXVcMI78J5qywFENEvBM8tklRxsRJk2LAbDhcnbkogZvNwom5i4xMKF2IgwkjB8MjYVSrGbRKZj5dqO90QbS6SRKtcFQI77tY3SztT94sinP3SlqUiNQmgK2xTs7gANdwhcVR75MQ3puroVb2TwxHDmwGwlHYKn95wkBCtCLwmJDSMwkck1Xc4PaSnbdkNo8OgZzbkFWYwFzoVjXxTqkx6DkhDTgLNS3p++8jVHH8oPlJHguOpNygyZ3CJovDWuDhJIt0Q+SVdd3sVDi+YUtOiSJ5KFoU4sFYuMCPnJFUfCjotJMlJxzE9FFWJiAg7tjJB3FcQ2o4dmIDWgE/6t1BMWPJD0nEapV7qeASWQkhsnVJSxMF+xsszF1zzCa2oQZMkDlb6qBoLo6KR2OeyGg6dBCzvc7lnu2ViV+MEy1txz0UReCM2aHzMRZONXvd8hxibmAN9tSpHOYQSB7fRFXXIHnJPxDjwfTaDSAqN+8Nwh8Rje1g5YIESEFUaocw2N1btSyDe2rBOEEEyuOpDPJ0Uf2jokKkgo7VyLvlwWFV5IkRa390vtBAy2PggcOQBqpKtJhcIJbbxlZlSinkv3yawdfidUMBzVjnpsbDBL9ybzztshXY4kO7jbkbaeCsUnmywV7V1YRw/EBoI7vWd0zH4rOTBgDZcZimn5qYvFxaPRC4iiSSUsaalPc1ZjOb27bhD8SKbAG/O4XPIIU1Cd0xrCTdEhoMCIVihGPzFc2xYagCe9bkosRTymF3OZICRBOuqsV7lbJ8BjHUw4ADvDdNaZKY1MfOyNkncVtvA55Bdc2ScQBZR0HOuCNVP9mcQCGkiVW3Z3Y6WMDWtKgxNS0I+pTgAnQ6eSGdh5gp+eBUnfINRbaYuiMLgybnRX/BuFz33gZYNiL9CoMVYg3Ai1oHlzVMNRCVRwXT7sWzpyUFJlNxHDhtwoC20lXGEwTq78jY53MQFc0vg7K6lmdnaTDxpsYg8pgJNRrKNJ2nLPcNSoTqK6Rj5XV6R/hfD/APbHq79Ulz/bWn7n/b6mr2fU70Y/DtGUiQ6BPKZ5FCOqwIBE891DXNzBJv6jmnU6UkTIHv4LqpGJvuG0WwZifH+qmfUtYRCbiYznYAAR5JpfYJ9qBcY0z5FSGk09OqFL4KJwzQ+RJ0TeIhHVoZHQCHDmNE10kQ0AdeaIqd45eXlAU1VjWtgEGeX6pOgwHh6VxOg2UjzJmw5RyXKAnREOYGkSdNRyH6lRp8huLsjABtrf81GA3KQLnnz8tl3FYjMLfsaqDMNBPXl5IrgDHUgIlR4itzXKj4Hsq+o+T1Tpd5LB1PEjRdNeDYAhDhhb5plQpuSWLPDva82Ecxv5c0ezDtBJdYaNnQTzWcY8gyDBG6MGLc+ZN9xseqz1acpPDwWQlFLKJ8WDmgJjGusCZIUhIfAkDZFswrWgSbodrGNkyKlKXBFgsNnflvG5GwRXFsfoymIDbSCYiLghMqYksaKdI96ZcW6k8kNTw8AucqdjqT3z4XC/ce6pw2x56sjpy7VHYbAudkdq3lMEbXUGHmRlF1I7EGSDFrxomrSlbbFi00vxSL/i2Paxg1nQAXjxWaqvLicpcWjnJifZC4jEF5kyTuVNQrZWmSQDy3SafSqjHGWPWrOo/AveG1KbWtL3hoaBZrQXOcSfO0ey0D8cSxrmEuabyFhWYgcv1V/X+Izmb2bctNkTmEF0agchssGr0UpyTjl554Rr02qUFnguPtjub0kF/i+j+B3/AOf1SWD1Gv8Awn5o3euUu8yOFbJ006rr67p1t7aD812vDXENNha+/NQ4mSARty/fVeltm5w1K0bDKoM6qLPdTUmkmCpmNHzR/dOitgThdG4MEGQLbk+w6qDFCXAgcpRD3GLH97pugvUa43s5s3lOY4lxOUE8osPBQCjDc/VSNqcjB6eqrcbjp2CmuYSA1rgQBPVw1021QmKJJMnxTqWJId3YuINtiomtzEmwvKkVK+eAuz4JXGYsIjRcqsbaJB5JdiS4awAJPVR1qne/eysixbCrUi4hrdTYK94H8JF3eedE74YwgdULj90L0HhtJop3IvdVVajTsjbRpRa3MwXGPh7KJbdZPF0C0wdV67i+zM99vqFl+P8ACg9pLQJCFOo1yNVoxaujAhW3B+C1cQHOp5YbE5iRJN4EA/shWvwzw6mQ/tRTcXGGtN3ty6nkBfxstFwTBijnY35XPLh0kNEdYj2WTV+kez3RhyvLxJQ0TnaUuDz9lUC8IoYiWhsSY131W44jwqg2mQQBSpMJDWgAufBu50SToPO87YMVDvAhXaXUQ1K3JcFFelKg7X5J8Iw9o3KD5/VGcWBzxoIBjqdUHSbLhcjeRqpamMu7McxLYEp5xfaprohIv/jaIjiAGgAd6dQhq1SZ6+6M/wCl1XMFQabCDJ+iDDSDn1n0kJ49m29rvkWW5JXGNqdLIhtIG58kykzu6am56cvBSg2Jcbct1YsCPI3CsDqkdNVYVqJynM2Nrqbg7gBZpE7xt4qXGv7rtDF/Dw6rFPUSVXbbBthp4uluvkouwZzK6i/+of8Axs9D+qS1bzHt8QJ1IgiTJTftGUyNvdPxDpfbay4zBPc4ANzTodAOpJ2TOy5BcKwzhW0MPuYNpgSQCNDZWGPfh3NpinnJDQMjWwJmTmcbu1I0VecFlyva4Ph4DrEZd2kT8zSA6/RNxNVzYeCBJ2sbAXsq7JyumEY+owGWh0A/ejTlb3XXVJPjy0QTK02OnOEqVaOoV6smI1gOeATlccrQAQesgTHK6HqNE90+fPyURxDnamfTy906ldIMSCwJhKkd4v7p740HmmjonSAWGHrs7PLUGhMQYKos8vPj+aLcddo+qApG6SENrbvyWuV0lY0HCMRDrPgm0fiW1LHOpsF4Ky/AeGB2UkSZt4re1WtblbyAVFXLwb6KtHJmK+Mw9ENApuOYkAxZxGsTqicA9tQSxpA6gj6FaccHpkAkW2Gw8lBig1ggAABIWFO+jVBaIZ2UECIDg7mPxTeUCzMHukkEfLAsjMXxCk1uepLi0wxogmXaxOg6qbB4vNQqVsoBAMDk0D3hcKupQm3txe33+5tpzVrXFiKmGDGjEOYCfuvdAJGsN3+qwXxBXoCofs47sdYm9xN40Wr+J+K021WU61MOo1GAzE5XgkH6Ful1iuK4en2h7AksjcyAeh3C3+iqbi1J7sr+n/ZztfLcun7glLEkSOe6IweFL3NaBabqKhhzKtsO80yC2LLszT2vbycyLV1fgN+JsblIYLBo0BMGQItsdVU4Ws3s5jUnW8IDH4k1HElPw4cW5Qe7+aqoUeypqPXqWVqvaTbJ34tykw+HkZ3QGzE+CL+GuDmrVmpBYy5adXTIEdJWr+zMYHMDBlMkgD5pgNb9Vl1GuhSnsSuy6jpZTju6Gdr1WhkNMaRzQ32d7w8Nl2hgdOXqVaYPg818jy3KZdDO/lI+4XH5dd9Vo8JgqdEWN5MkxN/DlCx1tZCj+HLeTXCjKryrJYPPvslT/tv9CkvROyp9PVJV+1n8IfZ/iYLhYYzvPbmdsCTA8QFo6OKw9VmU9wkQQQT4ZYVBwvDtc3tX94zAHMpxovLgZEETY6GTb0AXTq0IVpZbuvE5ak1wGUMSzvsLSG0wA7P3Q7KZyxqDIFtdVW8R4eWta8izieUg6wI2ghPxLRBl08ucoCriS4Nb+EETv+wrYU9nDC3dA9ZsmRouFnopKV/AapBjhMXlaLFZCxl/BEU1FV0HNKkUURkj3DeEqFWx8fdC1cQ6YGngnNceRARIEPBM6IKnZ3mj2gg3G39vdA12w5RDo9B+Hc5pg04zDSeasqrMVml4a5pGm88wZsqH4bx7hS/y4zRvYDqrKpjsQIPb045ZTcrFJ2kdanHdC6NXhq7hTaH/ADRdU3Eq5KbhcZULZfl6ROnmhcTUlKlkEngpuIxq42F1XcR4x2dMNp1JdBbDSCMpuS5M+JsR3co81mWhXxoRmk5GSpXcXZEz8VUcAHPcQ3QEkgeCPw7xBkwEBSZMhSCfLdX2S4MrbfIT9uGbeNLKatUcWw3uj6n9FFh2sm1zzRLkxUyGhhm5e9BcdlGXtYIFzKmr1BoNfquYdwBGYT03Pmkk2vEaJsfhxkYcPIv3iDv+7KajXLs+Z2UR80aTuqbhFSpUa51Wo7s2CcoMTAmLbfqEVxviwpf5YaC19Mzt80iZ3svO1dPKVdxWW35dep2qdeMaOeDnw9jezJoNZncHO70gAidSVeYvDOeZkeC84oY2pS7zTEtIJ6H2NlYYT4jrMAeYIY3KBsRa562F+iv1Po6cp76dvqyqhrVBbZGp7Ol+N3oUliv8QVOQ+qSHs6p3/oN68jtCIDZ67/vRcr1A60WCZQcYnnuu04cTs0anclduxyCN7yoqbrnz+sqWr3nACw6KWpQ7pI/fRDgINTMHX0UrapJRXDOFurd6Q0ZoMgztK7juHOp5cjXOOXM60wC4gTGlh7qtaiG/bfJZ2M9u62CvxDhKEOiMxVAgyYvcQZt1hDu67fuVemnwVtDKGKymYk7KzwWOa4RUFyfm5DwVV2O67TF76JJ0oz5HhNx4LV7pJIugMZqiG1bKOtTlPFWVgyyGcB4l2TgXfKTfp1XoFGnhHDNAJ5gryp9gnYau8fK5wAvYkbpJ0t2SynXccM9RxVdgFrBUeJ4m35W3P70QeGwdWtAaepJ2C1HCOBtp6CT+I6/0VUaZfOsY7ivDqjokZc3PX02VCcOQS06hetcX4XLA4D5TJ8N/18ljviHhRD87RIgExfzWhYVjJLLuZulYypBV2K5VZChcZRA+B9U7tXRin5bgTzUbWJ9QgQSJvooVkYqkbEncqJznEyZVkx4eO7Hgn9keSBB2DxVQ/wCWyYd80dQJ8rD0UvaAB2abCBvCZRaWzG4id43TatUAZIuTqs843vZF0JWsNLwRLgI35INtUCLAjkjqmBquinkLQRaRAkXSHAarQIgucYDdzr5JI1KccOSyWVIyllLgD7YfgC6jf8P4j8H1b+qSnbUPjXmJsq/C/IrjWJF09p2Gguep29P1UOIaJJFhNh7KahAF595K03wU2CMI0ayZBvyVjgMNYua6CHC0TfmqTC1oeBNtPPn6p78U4ONyCDMWiR4aqurCUlaLHptJ3ZraVYyYHmIjbWdFBxOs1riTWe2oGy0COzcOR/ETpdZmlxGoM8H59f6IZ5cTckxYTsAsdPQNSu2a56xONkh1MEyYSae9fkntJhRlq6SMLECA4tkrrAJslVFxPIfp+Sew8hHuiFcicu9qIhMqzCgKIzY2q6Si+DD/ADWgglru66PwusT5TPkggJXo3wNwSGZ3NF+YUeBYq7Lv4cwJZTLXDvAxOxAEAjodfNaHD4ZOw9JosALfRG0glirIsk7u4MWqrr8LvNMgc2kS0/p5K1drCfEJhbnnvH/hLPLmgMd0JLD4iJCw2Mwj6Ty14gj9yOi9yxLQsf8AFfC21aboHfaCWHfw8D+iIHgwODpDU6e6JqsaRGX1QeDKsabSUtxGsg1HBtbqLqbDUQT3LnpdS4nDEDWP6q3wFBtBmWbuiT7eSy6nUKlHGW+C+jRc5WfBU1qBaYcLo3AcKBdNURpABvOybia9NtSXTmkFzjoByAR7uI0mnMZktzA3IPh1/VYq+oqyglFPK5+hqo0aak3J8BuLcWxIBB0OkdPe6fTqtIDjAib7dbrOVviBzphoiRAdrl380zHcTzh1MNBaQIJmQVkjoarsmrGl6qmk7F/9qof9yl9f1SWK7EpLZ7Mh8bMnr0vhBizO5oGs6dUXVpRMRDSA52865WjcdUJRqGm7tAYI0IROIxLC1rrmo6XPOzb2AC6MrpoxqwHiXgu7rQ0bRJiOqbTZzUdSoTqd59VKHem6sFLfDcHe7Dvrti1g3UkD5j5KLC4KGdpV7oJhoIMuI1MbNHPqtd8O0WjDh1Nr2/ecH5sr+ZadPT+qrvifK1rYZIBdANozEkkfQBcqGsnKs6fj/O3d/k6D0qVJVPApsNkj5RPmg8WwTLRzkciF1jHRrB1j9TsnOeHCCxoPMW9V0jAMozO+kaaSpRhDvEoek4NNjf8AFsPBWVKuCLAxzO6Ibldmix8Cmdn/AFC5iT3z4pzLkQrCB3AuFGrVA2nVelvxTARhqZIdknM3QRfLOxLQbrE8NqOptOQd7L6fiJm1la4WoWtD3GS7vEG1oytjrE9BA1TRhuVw3saXhjiXtDDlaS0nQZmjpvNwI8Vp2G6zj6BzZWMdOZpBi1nAzmiNAfQBX0quAJHKghxUT6n6p+Jduga77uH8rfUotjxQq1RVWK1VrVaq/EtUiySWDzXimE7Ku4Ed0kub4EzHloozjmiLHw5rR/F2GBph4+64fWx/L0WPDhPM+ijKg7BcQcakughskToCOuyta+JaR2jjln5RrfUEqjDwLfQJlXEzYkxKyVdKpyTRfTruKaDcRiu1I7QRYDx3BMK04fWpMpmm4Egkmbd2W5beEn1WepNEk+CsqbRGYnmQPDn4qnUU1bauPA0aaWbscODUwSQXOva+vIIPiFB9IhxcwZvuNJJA81aYfFS4wPLyuo+NGoWE9nTcw7i7m9SbQVVTq1FUSk8Bq0obW0iu+3jk76JKrk8/qkumYLsc+0BSMpAm4Udd9+ukrprQRCboAnNBgNxcq64dhKbWCoWBx566dCqWviA5oOhG39Vf8PwzhSBkOa4ZhlNgSJyn0PnZZNZK0Fmxr0iW94uHYDFTUyve+7PvOOUkEAtYyYJE3J5abqj43xAOOVpkB0T0Gh/eiIOHDSXulx7wg+bTeL3J8VUGLiP6eCooUob9yLa9Sap7e87QMz4fQKMUgSSXQNv0Ur25QeoPqhHjvensFvRgZLSAmyKzAQAoKWGmbrlRmWd9kyyQge25PVWHDcNJJgEASZ2UGDwjnmACSdANSVqeF8KDg1hBAuCREl2+adrHTS3VWJYCkT4Dh5e4OEXacwkCGEjy5/1V5ggwXyCoSRBcJJi3ct3RrflCHxGFDSIkD7zdC4SNPD981c8HAuQXRpyBsLhuwgCOkIu9rINy3pwGge66XQFE56iqVEGBcjnVkIy75/FUnya2VHUJmU6hMebgPPKP1SMsQS69+aCxIR726BBYsIojM7xzDZ6NRsxafNtx7Lz4YRw5dfBejcQ+R45sd/xK8+biAdNeRTMpZ2sYH5IKCSAEq73B11xjylAT4QZX94wFcYOsyoS1rYAEk8zKoVJhcS6nOXcELPWo71fqX0quzHQv8TiBSbSeyCHkyOYbY+BlU2Lx57SoWEtY4nu7QeY0Q5EBRVKgI6qUqChzklSs5D/tR6eiSGlJaCkM7Nz3ZWNJPLktDgfh2m8MdLog5gbEO5dIM2XeFBstdSbVZOssL2O8eXiFeV6+Q2Fzc+3quNqtXUvthg6en00WryyZin8POqVHwQ2mHOaCb6GLDfxV5wum2lSLGGm+93NdMx+IbORuHJLG5co/mnXewibqGo9rQ0VHhznOAGUBoBm8AbAXMys1TUVKy2y8vl995op0YUndFbxbigaMpYC68jvCBtMayZWZqOc7aLyrni9am+plbbK5zT1Aggz4l3oqfE4gT3LAfVdXSU1GCsjn6qo5SecE2KMtHT3UDxMHp7Lj60tj/V+X79VxlWIEDqdbLWlYykzczbj9+KjD7EnnYK1qgCnmEHT62/NUjjdGOQm0+G6LchcR3yO7EW1k9LADzWt4VRnK8iIEBpEHe55HvFZXg4BwzXNBOk3OjZzAcpgLW8KqTTGtpAJtI1HvHkiubMjeC1dTEaW5bKuydkSW/KTJH4T06IoVlFVqjdMwId9okKI10I9hGmn70TmOQCgwVAd0RSi1+v0QNMAm4UzCGuBHggOgtxuhMdqEVyQvEfmCgWZ/HHuO/lcPoV5jpqvTsQPmHj9V5aQmKWTVaoPVMY7YKNo3XWCTAuSl4IWfDcC6qQz5Q4Egkaxy5o08I/yHE5u0a4gAaahsR1Vpgqjw1oqNEtiCNLeyLONY8xYGdeuy49XV1d3urHh99To09NDbnkynEOGFhY1z25iJLRJyg6ElVdWllJB25LUcUxVVoIpMOXV1TLObn5dVmXNJJgbrfpqk5xvL7+hkrQjGVkMypIj7O7kfRJaLlJqOBY2o6nLnMp02d2Y7zoA52+itMT2ZEukHK50b5WxM+o9VgaGKylp1DTmA62/RGVeKOc5z3GzmOZA2DuU9QuXV0Dc90cHRpavbGzL7H8Vpvp91ssABY8ES2pBGXKb/ANyswcS7u/6Wlo85k+JzFDAQuh620dNGkrIyVa8pu5NUqlzi4m5knz191xjCdBpdRucpKNQAzMK/hYKeXk5FwpmWBvrZQGoJlIHkpYiJhX7pbOsH0/f0UB1TyUnNlMiGq+EMQ406lMHQtIB/1ddrNd/uWy4PVLqc8iRfpr6GQvPvhF5FbL+Jp9WkO9mn1XpfD6mZpto5zehANiOkQigiqOMaIZzyrLJMjogzSQYUR03wiGgFQFiYMw0QCH0qaA4tXygAayD6XRlKsYuFTcVqS4kqBNKx+YBw0IBHmheJnvBR8Cr56LDuJHoSPaE7iZuiiMpMSOW8jzXmDaZJAheoVN/VedYt+SpUAH33Cf8AyKLKxhwNtY8SE1tJ1NwI+b7pHNRVHk6mUThHRbX9zZVy4IuTR4Xti3vup+hn3hQ08I4PbNhmt1NzH0QWD4ib6k/lN45J/FeJFz2ZLZbj+Y/oPzXN9XqKdlazNyrxUfkW/EMX2YzNe2REsduDy3WcoYhoc7MMskmQLX26BO4txA1Q3uhrgCCR9710/qVWUzGpnotGlodlDPJTWq75eBd9q3mPVJUuccklqsUWQMEYaXcPS6FoC6LxD4ZE3ciwxApSCQC6WphRy6yU2mU+SoAcWppS2TYUIdlPD+aiCdKJC6+HagGIon/WB/u7v5r0WgHtqBrScoI7sSMpuZOxk+y82+F8OamKpDk4OPg3vflHmvU69EWdBMEGBIm7eXhpopYNyyY26GcxE0TcJj23KDGQNkXQ1TFijcEBjr22Wd4qblaF5sszjzqoQsfhKr3HN3Dp8iB+YKsMfclZb4cxEY7s9jR+uYOn091qcULEogTuVAjOAdCY9V59x7CEYmsOVR3uvQjTnTZZD4obGLrafMD/ALmtd+aLKzOmmeS4+oW+P9pRVb2UeSUlyBGBd3bhSu6NnneEHTquaeicMUQSREGNVLEIcVrv4FDE3RdZ4qCRZw25johpEooY5mSXVxQI0WUtd828LphcusRFuOBgaealp1QWwQPGLlQvOymo4bNoYQZEweo4F1gtBwHgra4d2mdvd7hAhp6gmxjkg8FwsZ2uqXYD3gLEjkt/hz/ljKwtbFgdhtvYLnekNVKlBKHL6mzSUFUleXkVXGOBdqxgblaWC7jvZogny1WFq0XNcWwQRtBleoYIucYMxF55rH8baTUeHOvMTG23kqPRlebk6cne2S7XUYxSkjMkqQRCVaiQb/3TqVLMu0cw2H/pxgSaj6uwGQeJufYeq9EaxUvwlgeyw7GxBIzHxdf+nktCwIkG0GaJEKdq6GoMZMGITDTRmQJpphAa5W4ohrTJ5D/cQ0fUhZvHsWh4/RmiRJEubpraSPqAqziFCRPO/rdAPQH+GMBFavWO+SmzwDWud9cvoVeY2zSpuGUg2kzwn1uheKv7p6lN1F6AGEf3vFYX4hxQfiazh+MgeDe6PZa/tcoLtmgk+Qk+y86eCSSdTc+JUYhx1STCfTCgawC+qnbWAB6fVJYg5zbrppDZdwz8wMkTOnRQ4ixCliA2IEdCoWa3U2KPNDtdCYIRkSTvtAXUBsA7tFKzQJJIinH6q0wPyhJJLIiLGp+TvYrY/wDt+Q9kklw/Sn4oHT0X5h/Cv4TfA+6xXxh/Ff8A+P8AxCSSp9F/+mXyf6luu/6l8zMhGYf5R4pJL0nQ465PZMHoFYMSSTgJEmpJJQjguOSSUIiv4t/DH8w9iq7E/wAMeA9kkkB0WtL+G3+UeyrOLaBJJED4KLG/wqv/ANdT/iVhCupKMQF/Eo6mqSSUJJhvnHip+I/MEklAAdbZROSSRCMSSSUIf//Z" alt="">
+                      <div class="ml-2">
+                        <p class="font-oswald uppercase">Lu Hpring</p>
+                        <p class="paragraph">Designer</p>
+                      </div>   
+                      <i class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"></i>                  
+                    </img>
+                  </div>
+                </div>
+              </li>
+
+              <li class="swiper-slide">
+                <div class="bg-primaryColor dark:bg-darkColor flex flex-col gap-5 rounded-lg p-6">
+                  <p class="paragraph ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur voluptatum provident velit neque error voluptatem recusandae non.</p>
+                  <div class="flex items-center">
+                    <img class="w-12 h-12 rounded-full" src="https://i.ytimg.com/vi/VHOnx6p9LaU/hq720_2.jpg?sqp=-oaymwEiCNAFENAFSFryq4qpAxQIARUAAAAAJQAAyEI9AICiQ9ABAQ==&rs=AOn4CLCLsFJr8ur2pzeAiLRybEaApPI1Uw" alt="">
+                      <div class="ml-2">
+                        <p class="font-oswald uppercase">Honey Nway Oo</p>
+                        <p class="paragraph">Designer</p>
+                      </div>   
+                      <i class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"></i>                  
+                    </img>
+                  </div>
+                </div>
+              </li>
+
+              <li class="swiper-slide">
+                <div class="bg-primaryColor dark:bg-darkColor flex flex-col gap-5 rounded-lg p-6">
+                  <p class="paragraph ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur voluptatum provident velit neque error voluptatem recusandae non.</p>
+                  <div class="flex items-center">
+                    <img class="w-12 h-12 rounded-full" src="https://i.ytimg.com/vi/VHOnx6p9LaU/hq720_2.jpg?sqp=-oaymwEiCNAFENAFSFryq4qpAxQIARUAAAAAJQAAyEI9AICiQ9ABAQ==&rs=AOn4CLCLsFJr8ur2pzeAiLRybEaApPI1Uw" alt="">
+                      <div class="ml-2">
+                        <p class="font-oswald uppercase">Honey Nway Oo</p>
+                        <p class="paragraph">Designer</p>
+                      </div>   
+                      <i class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"></i>                  
+                    </img>
+                  </div>
+                </div>
+              </li>
+
+              <li class="swiper-slide">
+                <div class="bg-primaryColor dark:bg-darkColor flex flex-col gap-5 rounded-lg p-6">
+                  <p class="paragraph ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur voluptatum provident velit neque error voluptatem recusandae non.</p>
+                  <div class="flex items-center">
+                    <img class="w-12 h-12 rounded-full" src="https://i.ytimg.com/vi/VHOnx6p9LaU/hq720_2.jpg?sqp=-oaymwEiCNAFENAFSFryq4qpAxQIARUAAAAAJQAAyEI9AICiQ9ABAQ==&rs=AOn4CLCLsFJr8ur2pzeAiLRybEaApPI1Uw" alt="">
+                      <div class="ml-2">
+                        <p class="font-oswald uppercase">Honey Nway Oo</p>
+                        <p class="paragraph">Designer</p>
+                      </div>   
+                      <i class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"></i>                  
+                    </img>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+       </section>
+
+      <!-- contact -->
+       <section id="contact" class="bg-secondaryColor py-16 ">
+        <div class="container flex flex-col md:flex-row gap-5 md:items-center">
+          <div class="space-y-4 md:flex-1">
+            <h2 class="section__title text-blackColor">GET EXXLUSIVE UPDATE</h2>
+            <p class="text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          </div>
+
+          <div class="flex flex-col md:flex-row gap-3 md:flex-1">
+            <input class="p-2 text-blackColor rounded-lg outline-none md:w-full" type="email" placeholder="Email adress">
+            <a class="flex items-center justify-center gap-2 btn bg-blackColor hover:opacity-75" href="#">
+              <i class="fa-solid fa-paper-plane"></i>
+              Subscribe
+            </a>
+          </div>
+        </div>
+       </section>
+    </main>
+
+    <!-- footer -->
+    <section class="footer">
+      <div class="container">
+        <ul class="grid grid-cols-1 items-start gap-5 pb-5 md:grid-cols-2 lg:grid-cols-4">
+          <li>
+            <div class="space-y-3">
+              <a href="" class="text-4xl font-oswald uppercase">
+                Bur<span class="text-secondaryColor">ger</span>
+              </a>
+              <p class="text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque maxime beatae eius asperiores ipsa id provident iusto unde.</p>
+            </div>
+          </li>
+
+          <li>
+            <div class="flex flex-col gap-3">
+              <h3 class="text-lg uppercase font-oswald">support</h3>
+              <a href="" class="text-xs hover:text-secondaryColor">FAQ's</a>
+              <a href="" class="text-xs hover:text-secondaryColor">Privacy Policy</a>
+              <a href="" class="text-xs hover:text-secondaryColor">Term & Condition</a>
+              <a href="" class="text-xs hover:text-secondaryColor">Contact</a>
+            </div>
+          </li>
+
+          <li class="space-y-8">
+            <div class="space-y-2">
+              <h3 class="text-lg uppercase font-oswald">Phone</h3>
+
+              <p class="flex items-center gap-2 text-xs">
+                <i class="fa-solid fa-phone text-lg text-secondaryColor"></i>
+                +1 000 000 0000
+              </p>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="text-lg uppercase font-oswald">email</h3>
+
+              <p class="flex items-center gap-2 text-xs">
+                <i class="fa-solid fa-envelope text-lg text-secondaryColor"></i>
+                burger.info@email.com
+              </p>
+            </div>
+            
+          </li>
+
+          
+
+          <li class="space-y-8">
+            <div class="space-y-2">
+              <h3 class="text-lg uppercase font-oswald">adress</h3>
+
+              <p class="flex items-center gap-2 text-xs">
+                <i class="fa-solid fa-location-dot text-lg text-secondaryColor"></i>
+                adress goes here
+              </p>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="text-lg uppercase font-oswald">Follow Us</h3>
+
+              <div class="space-x-3">
+                <i class="fa-brands fa-facebook-f text-lgcursor-pointer text-secondaryColor hover:-translate-y-1 ease-in duration-200"></i>
+                <i class="fa-brands fa-twitter text-lg cursor-pointer text-secondaryColor hover:-translate-y-1 ease-in duration-200"></i>
+                <i class="fa-brands fa-square-instagram text-lg cursor-pointer text-secondaryColor hover:-translate-y-1 ease-in duration-200"></i>
+              </div>
+            </div>
+          </li>
+
+          
+        </ul>
+
+        <div class="flex flex-col items-center border-t border-primaryColorLight dark:border-darkColorLight py-5 md:flex-row md:justify-between">
+          <p class="paragraph">Burger Template Kit by Light Code.</p>
+          <p class="paragraph">Copyright 2023. All rights reserved.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- scroll up -->
+     <a id="scroll-up" href="#" class="fixed right-4 -bottom-1/2 bg-secondaryColor shadow-sm inline-block px-4 py-2 rounded-full text-lg text-blackColor z-50 hover:-translate-y-1 ease-in duration-200">
+      <i class="fa-solid fa-arrow-up"></i>
+     </a>
+
+
+    <!-- swiperjs -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+     <!-- NEW to study -->
+    <script>
+      const swiper = new Swiper('.swiper', {
+
+        speed: 400,
+        spaceBetween: 30,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 1,
+          },
+          // when window width is >= 768px
+          768: {
+            slidesPerView: 2,
+          },
+          // when window width is >= 1024px
+          1024: {
+            slidesPerView: 3,
+          }
+        },
+      });   
+    </script>
+
+    <!-- scrollreveal script link -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+  </body>
+</html>
